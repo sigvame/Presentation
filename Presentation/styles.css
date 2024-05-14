@@ -1,0 +1,96 @@
+.cpp-code {
+    background-color: #e3e3e3;
+    padding: 20px;
+    border-radius: 15px;
+    overflow-x: auto;
+    font-size: 20px;
+}
+
+.cpp-code code {
+    background-color: #e3e3e3
+}
+
+#navbarNav .nav-item a {
+    color: #f7f7f7;
+    transition: transform 0.5s ease;
+}
+
+#navbarNav .nav-item a:hover {
+    color: #cfcdcd;
+    transform: translate(2px, 2px);
+}
+
+header h1 {
+    margin-top: 60px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #333;
+}
+
+ul, ol {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+code {
+    background-color: #f7f7f7;
+    padding: 5px;
+}
+
+pre {
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+pre code {
+    font-size: 16px;
+}
+
+.ttt {
+    font-size: 50px;
+}
+
+
+footer section .div {
+    display: flex;
+    justify-content: center;
+    
+}
+
+footer section .par {
+    margin: 0 5px;
+    font-style: italic;
+}
+
+div .line{
+    width: 100%;
+    border-bottom: 2px solid #333;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

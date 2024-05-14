@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Code Presentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="bg-color">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#presentation">C++ Code</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-code">О проекте</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#funct_code">Функционал</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cont_code">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="text-center py-5 bg-secondary text-white">
+            <p id="presentation"></p>
+            <p id="#">  </p>
+            <p id="#">  </p>
+            <h1 id="">Презентация проекта С++</h1>
+        </header>
+
+        <main class="py-5">
+            <div class="container">
+                <section id="about-code">
+                    <h2 class="ttt">Симулятор выращивания растений</h2>
+                    <p>Консольное приложение разработаное на языке С++ для курсового проекта Програмирование на языке С++</p>
+                    <br><br>
+                    <h2>О проекте</h2>
+                    <section>
+                        <h4>Инициализация переменных и классов</h4>
+                        <p>Прежде всего, инициализируем необходимые переменные и классы:</p>
+                        <ul>
+                            <li>Импортируем необходимые библиотеки.</li>
+                            <li>Определяем классы <code>Plant</code> и <code>UserInventory</code>.</li>
+                            <li>Объявляем функции для управления растениями, такие как добавление, удаление и скрещивание.</li>
+                        </ul>
+                    </section>
+            
+                    <section>
+                        <h4>Основной цикл программы</h4>
+                        <p>После инициализации входим в основной цикл программы:</p>
+                        <ol>
+                            <li>Выводим приветственное сообщение и меню пользователя.</li>
+                            <li>Запрашиваем выбор действия пользователя.</li>
+                            <li>Обрабатываем выбранное действие:</li>
+                            <ul>
+                                <li>Сбор монет</li>
+                                <li>Полив растений</li>
+                                <li>Выкопка растений</li>
+                                <li>Скрещивание растений</li>
+                                <li>Отображение растений в инвентаре</li>
+                            </ul>
+                        </ol>
+                    </section>
+            
+                    <section class="logic--l">
+                        <h4>Логика действий</h4>
+                        <ul>
+                            <li>Логика сбора монет: перебираем растения на клумбе и добавляем соответствующее количество монет к кошельку пользователя<a href="#num-one"><sup style="color: red;">[1]</sup></a></li><br>
+                            <li>Логика полива и выкопки растений: пользователь выбирает растение и, если у него достаточно монет, выполняются соответствующие действия</li><br>    
+                            <li>Логика понижения и повышения уровня воды<a href="#num-two"><sup style="color: red;">[2]</sup></a></li><br>
+                            <li>Логика скрещивания растений: пользователь выбирает два растения для скрещивания, и если у него достаточно монет, проводится скрещивание с определенной вероятностью успеха в 10%. Если попытка неудачная, шанс поднимается. После удачного схрещивания шанс снова падает на начальное значение (10%)</li><br>
+                            <li>Отображение растений в инвентаре: выводим список растений с их порядковыми номерами</li><br>
+                            <li>Покупка и продажа растений: пользователь выбирает из инвенторя какое растение продать или из магазина какое купить. При этом все растения имеют свою цену в виде количества монет за штуку</li><br>
+                            <li>Посадка растений: пользователь может посадить на клумбу любое из растений доступных ему в инвентаре</li><br>
+                            <li>Уход за растениями: полив растений, сбор монет или выкопка растений</li><br>
+                            <li>Стоимость полива в зависимости от уровня воды<a href="#num-three"><sup style="color: red;">[3]</sup></a></li>
+                        </ul>
+                    </section>
+            
+                    <section>
+                        <h4>Завершение программы</h4>
+                        <p id="funct_code">Программа обрабатывает команду завершения, например, выход по выбору пользователя.</p>
+                    </section>
+                </section>
+                <br><br>
+                <section>
+                    <h2>Функционал кода</h2>
+                    <p>Код предоставляет следующий функционал:</p>
+                    <ul>
+                        <li>Добавление новых растений в инвентарь пользователя</li>
+                        <li>Удаление растений из инвентаря</li>
+                        <li>Скрещивание двух растений для получения новых видов</li>
+                        <li>Сбор монет от ухаживания за растениями с высоким уровнем воды</li>
+                        <li>Увеличение уровня воды растений с помощью полива.</li>
+                        <li>Улучшение качества почвы с помощью удобрения</li>
+                        <li>Отображение списка растений в инвентаре пользователя</li>
+                        <li>Завершение программы по выбору пользователя</li>
+                    </ul>
+                </section>
+                <div class="line"></div><br>
+
+                <section>
+                    <pre class="cpp-code">
+                        <code>
+while (true) 
+{
+    cout << "Выберите действие: " << endl;
+    cout << "1 - Потратить 50 монет на выбивание растения" << endl;
+    cout << "2 - Посмотреть список растений в инвентаре" << endl;
+    cout << "3 - Посмотреть список доступных растений в магазине" << endl;
+    cout << "4 - Уход за растениями" << endl;
+                ...
+                | cout << "1 - Собрать монеты с растений на клумбе" << endl;
+                | cout << "2 - Полить растения на клумбе" << endl;
+                | cout << "3 - Выкопать растение на клумбе" << endl;
+                ...
+    cout << "5 - Скрещивание растений" << endl;
+                ...
+                | cout << "Выберите два растения для скрещивания из вашего инвентаря:" << endl;
+                | cout << "Ваш инвентарь:" << endl;
+                ...
+    cout << "6 - Купить растение в магазине" << endl;
+    cout << "7 - Продать растение из инвентаря" << endl;
+    cout << "8 - Посадить растение на клумбу" << endl;
+                ...
+                | cout << "Выберите растение для посадки на клумбу:" << endl;
+                | cout << "Ваш инвентарь:" << endl;
+                ...
+    cout << "0 - Выйти из программы" << endl;
+}
+                        </code>
+                    </pre>
+                    <div id="num-one"></div>
+
+                </section>
+
+
+                <br>
+                <div class="line" id="num-two"></div>
+                <section>
+                    <p>
+                        <i><span class="star" style="color: red;"><sup id="num-three">1</sup></span>Примечание:</i> собирать монеты с растений можно только тогда когда они посажены на клубку и имеюют достаточный уровень воды
+                    </p>
+                </section>
+
+                <section>
+                    <p><i><span class="star" style="color: red;"><sup>2</sup></span>Примечание:</i> После каждого сбора монет, в программу дабавлена функция для проверки количества сборов монет (<code>count_t_coins</code>), юлагодоря которой уровень воды понижается. <code>count_t_coins = 3</code> - средний уровень; <code>count_t_coins = 9</code> - низкий уровень соответсвенно. Когда счетчик доходит до 9, срабатывает соответствующий блок кода, в следствии чего счетчик обнуляется.</p>
+                </section>
+
+                <section>
+                    <p><i><span class="star" style="color: red;"><sup>3</sup></span>Примечание:</i> В коде присутствует проверка на уровень воды и количество требуемых монет для полива. Например:</p>
+                    <ul>
+                        <li>Уровень воды находиться на Высоком уровне, то для того чтобы полить растение потребуеться всего лишь 50 монет.</li>
+                        <li>Однако, если уровень воды Средний, для полива потребуется уже 80 монет. А если уровень воды опуститься до Низкий, то придется потратить 150 монет дабы полить растение.</li>
+                    </ul>
+
+                    <p><b><i>Важно: </i></b>Уровень воды после полива <b>не</b> повышается сразу на отметку Высокий, а повышается на ступеньку выше:</p>
+                    <ul>
+                        <li>Низкий => Средний;</li>
+                        <li>Средний => Высокий;</li>
+                    </ul>
+                    <p>Аналогично и в обратном процессе.</p>
+                <div class="line"></div>
+                </section>
+            </div>
+
+
+        </main>
+
+        <footer class="py-4 bg-dark text-white text-center">
+
+            <section>
+                <h5 id="cont_code">Контактная информация</h5>
+                <h6>Если у вас возникли вопросы или предложения, свяжитесь с нами:</h6>
+                    <br>
+                <div class="div">
+                    <p class="par">Телефон: +38 (063) 538-85-87</p>
+                    <p class="par">|</p>
+                    <p class="par">Email: itstep.zheleznov@gmail.com</p>
+                    <p class="par">|</p>
+                    <p class="par">IT Step</p>
+                </div>
+            </section>
+            <p>&copy; 2024 C++ Code Presentation</p>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
